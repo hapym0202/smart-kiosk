@@ -22,7 +22,7 @@ export default function Kiosk() {
   // 관리자 인증 처리 함수임
   // 비밀번호가 맞으면 관리자 페이지로 이동함
   const handleAdminAccess = () => {
-    if (adminPassword === "9999") {   //현재 관리자 비밀번호 9999
+    if (adminPassword === "0000") {   //현재 관리자 비밀번호 0000
       setIsAdmin(true);    // 관리자 권한 true로 설정함
       navigate("/admin");  // 관리자 페이지로 이동시킴
     } else {
