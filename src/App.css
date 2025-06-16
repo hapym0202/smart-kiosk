@@ -1,0 +1,51 @@
+/* 전체 앱의 기본 레이아웃과 애니메이션 스타일 (Vite 템플릿 기반) */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+/* 로고에 호버 시 그림자 효과 추가 */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* React 로고에만 다른 그림자 */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* 로고 회전 애니메이션 */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 모션 선호 설정이 꺼져있을 경우 회전 애니메이션 실행 */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+/* 문서 링크 스타일 */
+.read-the-docs {
+  color: #888;
+}

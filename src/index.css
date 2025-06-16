@@ -1,0 +1,49 @@
+/* Tailwind의 기본 스타일, 컴포넌트, 유틸리티 클래스 불러오기 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 노눔 고딕체 (GongGothicMedium) 폰트 로드 */
+@font-face {
+  font-family: 'GongGothicMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 전체 바디 스타일 초기화 */
+body {
+  font-family: 'GongGothicMedium', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  overflow: hidden; /* 전체 페이지 스크롤 제거 (키오스크 특성으로 전체화면을 고정 UI용이다) */
+}
+
+/* 키오스크 메인 버튼 스타일 */
+.square-button {
+  font-size: 50px;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 입체감 있는 그림자 효과 */
+  box-shadow:
+    inset 0 6px 8px rgba(255, 255, 255, 0.4),
+    0 8px 0 rgba(0, 0, 0, 0.2),
+    0 12px 20px rgba(0, 0, 0, 0.3);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 버튼 hover시 효과 */
+.square-button:hover {
+  transform: translateY(8px) scale(0.96);
+  box-shadow:
+    inset 0 3px 4px rgba(0, 0, 0, 0.2),
+    0 2px 0 rgba(0, 0, 0, 0.4),
+    0 8px 16px rgba(0, 0, 0, 0.5);
+}
