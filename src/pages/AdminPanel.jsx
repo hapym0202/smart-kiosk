@@ -133,8 +133,8 @@ export default function AdminPanel() {
             {/* 필터된 민원들 하나씩 보여줌 */}
             {filtered.map((c) => (
               <tr key={c.id}>
-                <td className="border p-2">{c.name}</td>
-                <td className="border p-2">{c.type}</td>
+                <td className="border p-2 whitespace-nowrap text-center">{c.name}</td>
+                <td className="border p-2 whitespace-nowrap text-center">{c.type}</td>
                 <td className="border p-2">{c.title}</td>
                 <td className="border p-2">{c.content}</td>
                 <td className="border p-2">
@@ -160,10 +160,10 @@ export default function AdminPanel() {
                     }
                   />
                 </td>
-                <td className="border p-2">
+                <td className="border p-2 text-center">
                   {/* 답변 저장 버튼 */}
                   <button
-                    className="bg-blue-600 text-white text-sm px-3 py-1 rounded hover:bg-blue-700"
+                    className="bg-blue-600 text-white text-sm px-3 py-1 rounded hover:bg-blue-700 min-w-[60px]"
                     onClick={() => handleSave(c.id)}
                   >
                     저장
