@@ -87,7 +87,7 @@ export default function Apply() {
         type="text"
         className="w-full p-2 border rounded mb-4"
         value={title}
-        onChange={(e) => setTitle(e.target.value)} // 입력값 상태로 저장함
+        onChange={(e) => setTitle(e.target.value)} // 입력값 상태로 저장
         placeholder="예: 체육관 조명 고장 신고"
       />
 

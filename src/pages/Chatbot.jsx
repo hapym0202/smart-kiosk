@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import { fetchGPTReply } from "../api/gpt"; // GPT 응답 받아오는 함수 불러옴
 
 export default function Chatbot() {
-  const [messages, setMessages] = useState([]);     // 전체 대화 내용 저장 (bot과 user의 메시지들)
+  const [messages, setMessages] = useState([]);     // 전체 대화 내용 저장
   const [input, setInput] = useState("");           // 사용자가 입력 중인 텍스트 상태
   const [loading, setLoading] = useState(false);    // GPT 답변 대기 중일 때 true로 바뀜
   const bottomRef = useRef(null);                   // 맨 아래로 스크롤하기 위한 ref임

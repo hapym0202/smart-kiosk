@@ -36,7 +36,7 @@ export default function Login() {
 
   // 인증번호 전송 함수
   const sendCode = async () => {
-    // 전화번호 형식을 정리함: 010-1234-5678 → +821012345678 형태로 바꿈
+    // 전화번호 형식을 정리함: 010-1234-5678 -> +821012345678 형태로 바꿈
     const cleaned = phoneInput.replace(/[-\s]/g, "").replace(/^0/, "");
     const formatted = "+82" + cleaned;
 
@@ -52,7 +52,7 @@ export default function Login() {
         size: "invisible"
       });
 
-      // Firebase에 전화번호 인증 요청 → 사용자에게 문자로 인증코드 전송됨
+      // Firebase에 전화번호 인증 요청 -> 사용자에게 문자로 인증코드 전송됨
       const result = await signInWithPhoneNumber(auth, formatted, window.recaptchaVerifier);
       setConfirmationResult(result); // 받은 세션을 상태로 저장함
       setMessage("인증번호를 전송했습니다."); // 안내 메시지 보여줌

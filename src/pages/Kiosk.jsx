@@ -3,7 +3,7 @@
 // 화면 오른쪽 아래에서는 관리자 로그인
 
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useUser } from "../UserContext";
 
 export default function Kiosk() {
@@ -30,6 +30,14 @@ export default function Kiosk() {
     }
   };
 
+  useEffect(() => {
+    const utterance = new SpeechSynthesisUtterance("키오스크 화면입니다.");
+    utterance.lang = "ko-KR";
+    utterance.rate = 1.2;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
+  }, []);
+
   return (
     <div className="h-screen w-screen bg-white flex flex-col overflow-hidden px-8">
       {/* 메인 버튼 영역: 화면 세로 중앙 정렬됨 */}
@@ -41,7 +49,7 @@ export default function Kiosk() {
             onClick={() => navigate("/apply")}
             className="square-button w-full h-full"
             style={{
-              backgroundColor: "#cc0d00",     // 진한 빨간색 배경
+              backgroundColor: "#cc0d00",     // 빨간색 배경
               borderColor: "#ffffff"          // 흰색 테두리
             }}
           >

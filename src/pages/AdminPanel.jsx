@@ -150,7 +150,7 @@ export default function AdminPanel() {
                   </select>
                 </td>
                 <td className="border p-2">
-                  {/* 답변 쓰는 textarea */}
+                  {/* 답변 쓰는 텍스트박스 */}
                   <textarea
                     rows={2}
                     className="w-full border rounded p-1 text-sm"
